@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RestauranteApplication {
 
     public static void main(String[] args) {
-        //minuto 21:25 del video
+        //minuto 1:05:39 del video
 
         SpringApplication.run(RestauranteApplication.class, args);
     }
