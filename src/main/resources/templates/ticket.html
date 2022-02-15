@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestionar Pedidos</title>
+    <link rel="stylesheet" type="text/css"  th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container-fluid text-center">
+  <div><h2>Gestionar pedidos</h2></div>
+   <div>
+       <table class="table table-bordered">
+           <thead class="thead-dark">
+           <tr>
+               <th>ID</th>
+               <th>Nombre</th>
+               <th>Cantidad</th>
+               <th>Hora</th>
+               <th>IdCamarero</th>
+               <th>Mesa</th>
+               <th>Notas</th>
+           </tr>
+           </thead>
+           <tbody>
+           <th:block th:each="ticket: ${listTicket}">
+             <tr>
+                 <td>[[${ticket.id}]]</td>
+                 <td>[[${ticket.nombre}]]</td>
+                 <td>[[${ticket.cantidad}]]</td>
+                 <td>[[${ticket.hora}]]</td>
+                 <td>[[${ticket.idcamarero}]]</td>
+                 <td>[[${ticket.mesa}]]</td>
+                 <td>[[${ticket.notas}]]</td>
+             </tr>
+           </th:block>
+           </tbody>
+       </table>
+   </div>
+</div>
+</body>
+</html>
