@@ -18,4 +18,10 @@ public class TicketController {
          return "ticket";
     }
 
+    @GetMapping("/ticket/nuevo")
+    public String showNewForm(Model model){
+        model.addAttribute("ticket", new Ticket());
+        return "ticket_form";
+    }
+
 }

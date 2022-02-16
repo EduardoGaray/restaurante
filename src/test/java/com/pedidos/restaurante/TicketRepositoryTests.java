@@ -22,12 +22,12 @@ public class TicketRepositoryTests {
     @Test
     public void testAddNew(){
         Ticket ticket = new Ticket();
-        ticket.setMesa(8);
-        ticket.setCantidad(1);
-        ticket.setHora(8.25);
-        ticket.setIdcamarero(345);
-        ticket.setNombre("vurger mediana");
-        ticket.setNotas("sin lechuga");
+        ticket.setMesa(2);
+        ticket.setCantidad(3);
+        ticket.setHora(8.45);
+        ticket.setIdcamarero(233);
+        ticket.setNombre("Hamburguesa de Pollo");
+        ticket.setNotas("Extra de Barbacoa");
 
         Ticket savedTicket = repo.save(ticket);
 
@@ -64,10 +64,10 @@ public class TicketRepositoryTests {
 
     }
 
-    @Test
-    public void testDelete(){
-        Integer ticketId = 1;
-        repo.deleteById(ticketId);
-        Optional<Ticket> optionalTicket = repo.findById(ticketId);
-    }
+//    @Test
+//    public void testDelete(){
+//        Integer ticketId = 1;
+//        repo.deleteById(ticketId);
+//        Optional<Ticket> optionalTicket = repo.findById(ticketId);
+//    }
 }
