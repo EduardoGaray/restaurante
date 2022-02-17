@@ -2,6 +2,7 @@ package com.pedidos.restaurante.ticket;
 
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.sql.Time;
 
 @Entity
 @Table(name =  "ticket")
@@ -20,7 +21,7 @@ public class Ticket {
     @Column(nullable = false)
     private Integer cantidad;
     @Column(nullable = false)
-    private Double  hora;
+    private Time hora;
     @Column(nullable = false)
     private String notas;
 
@@ -65,11 +66,11 @@ public class Ticket {
         this.cantidad = cantidad;
     }
 
-    public Double getHora() {
+    public  Time getHora() {
         return hora;
     }
 
-    public void setHora(Double hora) {
+    public void setHora(Time hora) {
         this.hora = hora;
     }
 
@@ -79,18 +80,5 @@ public class Ticket {
 
     public void setNotas(String notas) {
         this.notas = notas;
-    }
-
-    @Override
-    public String toString() {
-        return "Ticket{" +
-                "id=" + id +
-                ", mesa=" + mesa +
-                ", nombre='" + nombre + '\'' +
-                ", idcamarero=" + idcamarero +
-                ", cantidad=" + cantidad +
-                ", hora=" + hora +
-                ", notas='" + notas + '\'' +
-                '}';
     }
 }
