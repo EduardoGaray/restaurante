@@ -29,9 +29,21 @@ public class TicketController {
         return "ticket_form";
     }
 
-    @PostMapping("/ticket/guardar")
+    @PostMapping("/ticket/edit/submit")
     public String saveTicket(@ModelAttribute("ticket") Ticket ticket){
         service.save(ticket);
+        return "redirect:/ticket";
+    }
+
+    @PostMapping("/ticket/altas/submit")
+    public String newTicket(@ModelAttribute("ticket") Ticket ticket){
+        service.save(ticket);
+        return "redirect:/ticket";
+    }
+
+    @GetMapping("/ticket/borrar/{id}")
+    public String deleteTicket(@PathVariable("id") Integer id){
+        service.deleteById(id);
         return "redirect:/ticket";
     }
 

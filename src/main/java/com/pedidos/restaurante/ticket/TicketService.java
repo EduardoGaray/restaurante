@@ -27,4 +27,8 @@ public class TicketService {
         }
         throw new TicketNotFoundException("No se ha encontrado el Ticket solicitado");
     }
+
+    public void deleteById(Integer id){
+        repo.deleteById(id);
+    }
 }

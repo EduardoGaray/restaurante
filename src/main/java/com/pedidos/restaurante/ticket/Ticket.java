@@ -11,18 +11,11 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, unique = true, length = 2)
     private Integer mesa;
-
-    @Column(length = 25, nullable = false)
     private String nombre;
-    @Column(length = 3, nullable = false)
     private Integer idcamarero;
-    @Column(nullable = false)
     private Integer cantidad;
-    @Column(nullable = false)
-    private Time hora;
-    @Column(nullable = false)
+    private String hora;
     private String notas;
 
 
@@ -66,11 +59,11 @@ public class Ticket {
         this.cantidad = cantidad;
     }
 
-    public  Time getHora() {
+    public  String getHora() {
         return hora;
     }
 
-    public void setHora(Time hora) {
+    public void setHora(String hora) {
         this.hora = hora;
     }
 
